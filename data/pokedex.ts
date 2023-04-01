@@ -21789,7 +21789,7 @@ nebuluga: {
 		heightm: 5.6,
 		weightkg: 222,
 		color: "White",
-		prevo: "chilladder",
+		prevo: "Chilladder",
 		evoType: "useItem",
 		evoItem: "Ice Stone",
 		eggGroups: ["Field"],
