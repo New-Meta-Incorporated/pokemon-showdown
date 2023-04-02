@@ -1874,7 +1874,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
     },
 	enthusiasm: {
 		name: "Enthusiasm",
-		shortDesc: "This Pokemon's Special Attack is 1.5x and accuracy of its special attacks is 0.8x.",
+		shortDesc: "This Pokemon's super effective hits do 1.2x damage.",
 		newmeta: "true",
 	},
 	hubris: {
@@ -2247,7 +2247,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	rooted: {
 		name: "Rooted",
 		desc: "This Pokemon Ingrains itself on switch-in, trapping itself.",
-		ShortDesc: "This Pokemon uses Ingrain on switch-in.",
+		shortDesc: "This Pokemon uses Ingrain on switch-in.",
 	},
 	acceleration: {
 		name: "Acceleration",

@@ -833,6 +833,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 			if (target.side.getSideCondition('antidote')) return;
 			if (target.hasAbility('poisonheal')) return;
 			if (target.hasAbility('immunity')) return;
+			if (target.hasAbility('toxicboost')) return;
+			if(target.hasAbility('toxicintake')) {
+				if(target.hasItem("utilityUbmrella"))return;
+				else this.heal(target.baseMaxhp /16);
+			}
 			if (target?.hasAbility('catastrophic')) {
 				this.damage(target.baseMaxhp / 8);
 			}

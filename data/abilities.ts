@@ -1524,7 +1524,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return this.chainModify(1.25);
 		},
 		onModifySpePriority: 5,
-		onModifySpe(spe, attacker, defender, move) {
+		onModifySpe(this, spe, pokemon) {
 			this.debug('Heavy Metal weaken');
 			return this.chainModify(0.5);
 		},
@@ -1795,10 +1795,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
                 delete boost.spa;
                 this.add('-immune', target, '[from] ability: Inner Focus');
             }
-			if (effect.id === 'petrify') {
-                delete boost.spe;
-                this.add('-immune', target, '[from] ability: Inner Focus');
-            }
 		},
 		isBreakable: true,
 		name: "Inner Focus",
@@ -1964,7 +1960,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			return this.chainModify(0.75);
 		},
 		onModifySpePriority: 5,
-		onModifySpe(spe, attacker, defender, move) {
+		onModifySpe(this, spe, pokemon) {
 			this.debug('Light Metal boost');
 			return this.chainModify(1.25);
 		},
@@ -2578,10 +2574,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			}
 			if (effect.id === 'daunt') {
                 delete boost.spa;
-                this.add('-immune', target, '[from] ability: Oblivious');
-            }
-			if (effect.id === 'petrify') {
-                delete boost.spe;
                 this.add('-immune', target, '[from] ability: Oblivious');
             }
 		},
@@ -3776,7 +3768,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			this.boost({spe: 1});
 		},
 		onBoost(boost, target, source, effect) {
-			if (effect.id == 'intimidate' || effect.id == 'daunt' || effect.id == 'petrify') {
+			if (effect.id == 'intimidate' || effect.id == 'daunt') {
 				this.boost({spe: 1});
 			}
 			return;
@@ -4155,6 +4147,12 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		onBasePower(basePower, attacker, defender, move) {
 			if ((attacker.status === 'psn' || attacker.status === 'tox') && move.category === 'Physical') {
 				return this.chainModify(1.5);
+			}
+		},
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Poison') {
+					this.add('-immune', target, '[from] ability: Toxic Boost');
+				return null;
 			}
 		},
 		name: "Toxic Boost",
@@ -4765,12 +4763,11 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         num: 1003,
     },
 	undead: {
-        onModifyMovePriority: -5,
-        onModifyMove(move) {
-            if (!move.ignoreImmunity) move.ignoreImmunity = {};
-            if (move.ignoreImmunity !== true) {
-                move.ignoreImmunity['Ghost'] = true;
-            }
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'Ghost') {
+					this.add('-immune', target, '[from] ability: Undead');
+				return null;
+			}
         },
         onBoost(boost, target, source, effect) {
             if (effect.id === 'intimidate') {
@@ -4963,25 +4960,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
         rating: 3,
         num: 1015,
     },
-	petrify: {
-		onStart(pokemon) {
-			let activated = false;
-			for (const target of pokemon.adjacentFoes()) {
-				if (!activated) {
-					this.add('-ability', pokemon, 'Petrify', 'boost');
-					activated = true;
-				}
-				if (target.volatiles['substitute']) {
-					this.add('-immune', target);
-				} else {
-					this.boost({spe: -1}, target, pokemon, null, true);
-				}
-			}
-		},
-		name: "Petrify",
-		rating: 3.5,
-		num: 1017,
-	},
 	toxicwasteland: {
 		onStart(source) {
 			this.field.setWeather('toxiccloud');
@@ -5087,15 +5065,9 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 1025,
 	},
 	enthusiasm: {
-		// This should be applied directly to the stat as opposed to chaining with the others
-		onModifySpAPriority: 5,
-		onModifySpA(spa) {
-			return this.modify(spa, 1.5);
-		},
-		onSourceModifyAccuracyPriority: 7,
-		onSourceModifyAccuracy(accuracy, target, source, move) {
-			if (move.category === 'Special' && typeof accuracy === 'number') {
-				return accuracy * 0.8;
+		onBasePower(damage, source, target, move) {
+			if (target.runEffectiveness(move) > 1) {
+				return this.chainModify([4915, 4096]);
 			}
 		},
 		name: "Enthusiasm",
@@ -5429,12 +5401,14 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 1048,
 	},
 	toxicintake: {
-        onWeather(target, source, effect) {
-            if (target.hasItem('utilityumbrella')) return;
-            if (effect.id === 'toxiccloud') {
-                this.heal(target.baseMaxhp / 16);
-            }
-        },
+		// coded in conditions.ts, to match other weather code
+
+        // onWeather(target, source, effect) {
+        //     if (target.hasItem('utilityumbrella')) return;
+        //     if (effect.id === 'toxiccloud') {
+        //         this.heal(target.baseMaxhp / 16);
+        //     }
+        // },
         name: "Toxic Intake",
         rating: 1.5,
         num: 1049,
@@ -5569,20 +5543,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 0,
 		num: 1057,
 	},
-	negationfield: {
-        onStart(pokemon) {
-            this.field.addPseudoWeather('magicroom', pokemon);
-        },
-        onSwitchOut(pokemon) {
-            this.field.removePseudoWeather('magicroom');
-        },
-        onFaint(pokemon) {
-            this.field.removePseudoWeather('magicroom');
-        },
-        name: "Negation Field",
-        rating: 3,
-        num: 1058,
-    },
 	enchantment: {
 		onModifyAtkPriority: 5,
 		onModifyAtk(atk, attacker, defender, move) {
@@ -5668,20 +5628,6 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 2,
 		num: 1062,
 	},
-	wonderfield: {
-        onStart(pokemon) {
-            this.field.addPseudoWeather('wonderroom', pokemon);
-        },
-        onSwitchOut(pokemon) {
-            this.field.removePseudoWeather('wonderroom');
-        },
-        onFaint(pokemon) {
-            this.field.removePseudoWeather('wonderroom');
-        },
-        name: "Wonder Field",
-        rating: 3,
-        num: 1063,
-    },
 	familybonds: {
 		onModifyMove(move, source, target) {
 			const type1 = source.types[0];
@@ -6101,20 +6047,23 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 62,
 	},
 	starstruck: {
-		onSourceModifyAccuracyPriority: -1,
-		onSourceModifyAccuracy(accuracy) {
-			if (typeof accuracy !== 'number') return;
-				if (pokemon.hp <= pokemon.maxhp / 2) {
-					return accuracy = true;
-				}
+		// onSourceModifyAccuracyPriority: -1,
+		onModifyMove(move, source) {
+			if (source.hp <= source.maxhp / 2) move.accuracy = true;
 		},
+		// onSourceModifyAccuracy(accuracy, target, source, move) {
+		// 	if (typeof accuracy !== 'number') return;
+		// 		if (pokemon.hp <= pokemon.maxhp / 2) {
+		// 			return accuracy = true;
+		// 		}
+		// },
 		name: "Starstruck",
 		rating: 3,
 		num: 14,
 	},
 	mistweaver: {
 		onSourceBasePowerPriority: 22,
-		onSourBasePower(basePower, attacker, defender, move) {
+		onSourceBasePower(basePower, attacker, defender, move) {
 			if (this.field.isTerrain('mistyterrain')) return;
 				if (move.type === 'Fairy') {
 					this.debug('Weaver Mist boost');
@@ -6154,12 +6103,75 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 			if (!lastAttackedBy) return;
 			const damage = move.multihit ? move.totalDamage : lastAttackedBy.damage;
 			if (target.hp <= target.maxhp / 2 && target.hp + damage > target.maxhp / 2) {
-				source.side.addVolatileStatus('magmabath');
+				source.side.addSideCondition('magmabath');//supposed to be a side condition? matters for doubles
 			}
+		},
+		onSourceSwitchOut(source){
+		  source.side.removeSideCondition('magmabath'); //clear side condition when pokemon leaves
 		},
 		name: "Cauterize",
 		rating: 2,
 		num: 201,
+	},
+	cosmersion: {
+		onTryHit(target, source, move) {
+			if (target !== source && move.type === 'cosmic') {
+				if (!this.heal(target.baseMaxhp / 4)) {
+					this.add('-immune', target, '[from] ability: Cosmersion');
+				}
+				return null;
+			}
+		},
+		isBreakable: true,
+		name: "Cosmersion",
+		rating: 3.5,
+		num: 202,
+	},
+	cosmicforce: {
+		onBasePowerPriority: 21,
+		onBasePower(basePower, attacker, defender, move) {
+			if (this.field.getPseudoWeather('gravity')) {
+					this.debug('Cosmic Force boost');
+					return this.chainModify([5325, 4096]);
+			}
+		},
+		name: "Cosmic Force",
+		rating: 2,
+		num: 203,
+	},
+	Resilience: {
+		onDamagingHit(damage, target, source, effect) {
+			if(effect.category == "Special")
+			this.boost({spd: 1});
+		},
+		name: "Resilience",
+		rating: 3.5,
+		num: 204,
+	},
+	stonegaze: {
+		onDamagingHit(damage, target, source, move) {
+				if (this.randomChance(2, 10)) {
+					source.trySetStatus('brn', target);
+				}
+		},
+		name: "Stone Gaze",
+		rating: 2,
+		num: 205,
+	},
+	honeyboost: {
+		onModifyAtk(atk, pokemon, source) {
+			if (pokemon.hasItem("honey")) {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		onModifyDef(def, pokemon, source) {
+			if (pokemon.hasItem("honey")) {
+				return this.chainModify([4915, 4096]);
+			}
+		},
+		name: "Honey Boost",
+		rating: 4,
+		num: 206,
 	},
 
 };

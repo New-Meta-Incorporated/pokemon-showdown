@@ -1149,7 +1149,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "Illegal",
 	},
 	lapras: {
-		tier: "UU",
+		tier: "ZU",
 		doublesTier: "(DUU)",
 	},
 	laprasalola: {
@@ -2879,7 +2879,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	drifblim: {
-		tier: "UUBL",
+		tier: "PU",
 		doublesTier: "DUU",
 	},
 	buneary: {
@@ -3462,7 +3462,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		randomBattleLevel: 80,
 		randomDoubleBattleMoves: ["megahorn", "poisonjab", "protect", "rockslide", "superpower", "swordsdance"],
 		randomDoubleBattleLevel: 84,
-		tier: "UU",
+		tier: "RU",
 		doublesTier: "(DUU)",
 	},
 	cottonee: {
@@ -6557,7 +6557,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NU",
 	},
 	muuthate: {
-		tier: "UU",
+		tier: "NU",
 	},
 	hydrame: {
 		tier: "OU",
@@ -6684,7 +6684,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NFE",
 	},
 	cheslime: {
-		tier: "UU",
+		tier: "RU",
 	},
 	leamyst: {
 		tier: "UU",
@@ -6919,9 +6919,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	cabiapod: {
 		tier: "PU",
 	},
-	cabiapod: {
-		tier: "PU",
-	},
 	kobyss: {
 		tier: "LC OU",
 	},
@@ -7136,6 +7133,91 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "NU",
 	},
 	tazelle: {
+		tier: "ZU",
+	},
+	arboklokura: {
+		tier: "NU",
+	},
+	grumpiglokura: {
+		tier: "PU",
+	},
+	bugaboogie: {
+		tier: "UU",
+	},
+	sawcodil: {
+		tier: "ZU",
+	},
+	tundrago: {
+		tier: "PU",
+	},
+	tectaur: {
+		tier: "ZU",
+	},
+	venomicore: {
+		tier: "Uber",
+	},
+	terrior: {
+		tier: "ZU",
+	},
+	faebletaur: {
+		tier: "Uber",
+		doublesTier: "DOU",
+	},
+	prikall: {
+		tier: "LC UU",
+	},
+	mespine: {
+		tier: "ZU",
+	},
+	gauchomander: {
+		tier: "UU",
+	},
+	velonadon: {
+		tier: "Uber",
+	},
+	neglecrow: {
+		tier: "ZU",
+	},
+	pyroterois: {
+		tier: "PU",
+	},
+	ratautumn: {
+		tier: "PU",
+	},
+	bikkubear: {
+		tier: "LC UU",
+	},
+	bonfaya: {
+		tier: "NFE",
+	},
+	calvana: {
+		tier: "ZU",
+	},
+	caporaptor: {
+		tier: "RU",
+	},
+	jumplufforre: {
+		tier: "PU",
+	},
+	bunnula: {
+		tier: "LC UU",
+	},
+	lepanova: {
+		tier: "UU",
+	},
+	icicroak: {
+		tier: "LC UU",
+	},
+	rascleaf: {
+		tier: "LC UU",
+	},
+	breezeaf: {
+		tier: "NFE",
+	},
+	soarustle: {
+		tier: "RU",
+	},
+	doodbird: {
 		tier: "ZU",
 	},
 };
