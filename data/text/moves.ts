@@ -7746,9 +7746,4 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Power is equal to 100+(X*20), where X is the target's total stat stage changes that are greater than 0, but not more than 200 power.",
 		shortDesc: "100 power +20 for each of the target's stat boosts.",
 	},
-	piercingeyes: {
-		name: "Piercing Eyes",
-		desc: "Has a 50% chance to paralyze the target.",
-		shortDesc: "50% chance to paralyze the target.",
-	},
 };
