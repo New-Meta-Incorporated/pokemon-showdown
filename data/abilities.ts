@@ -8482,7 +8482,7 @@ realist: {
 		rating: 2.5,
 		num: 219,
 	},
-	/*proteanmaxima: {
+	proteanmaxima: {
 		onAfterMega(pokemon) {
 			if (!pokemon.baseSpecies.id.includes('eevee') || !pokemon.species.id.includes('eevee')) {
 				return;
@@ -8663,7 +8663,7 @@ realist: {
 		gen: 6,
 		rating: 4.5,
 		num: 25,
-	},*/
+	},
 	dreadspace: {
 		onStart(pokemon) {
 			this.add('-ability', pokemon, 'Dread Space');
