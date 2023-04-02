@@ -312,6 +312,35 @@ export const Formats: FormatList = [
 		banlist: ['Corsola-Galar', 'Cutiefly', 'Ponyta-Base', 'Scyther', 'Sneasel', 'Swirlix', 'Tangela', 'Vulpix', 'Vulpix-Alola', 'Ally Switch'],
 	},
 	{
+		name: "[Gen 8] NM VGC2022",
+		threads: [
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3677186/">VGC 2022 Metagame Discussion</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3695848/">VGC 2022 Sample Teams</a>`,
+			`&bullet; <a href="https://www.smogon.com/forums/threads/3696395/">VGC 2022 Viability Rankings</a>`,
+		],
+
+		mod: 'gen8newmeta',
+		gameType: 'doubles',
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 8', 'VGC Timer', 'Limit Two Restricted'],
+		restricted: ['Restricted Legendary'],
+	},
+	{
+		name: "[Gen 8] NM VGC2021",
+
+		mod: 'gen8newmeta',
+		gameType: 'doubles',
+		searchShow: false,
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 8', 'VGC Timer'],
+	},
+	{
+		name: "[Gen 8] NM VGC2020",
+
+		mod: 'gen8newmetadlc1',
+		gameType: 'doubles',
+		searchShow: false,
+		ruleset: ['Flat Rules', '!! Adjust Level = 50', 'Min Source Gen = 8', 'VGC Timer'],
+	},
+	{
 		name: "[Gen 8] 2v2 Doubles",
 		desc: `Double battle where you bring four Pok&eacute;mon to Team Preview and choose only two.`,
 		threads: [
