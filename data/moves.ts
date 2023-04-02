@@ -24176,6 +24176,64 @@ terrorize: {
 		type: "Psychic",
 		contestType: "Cool",
 	},
+	starburst: {
+		num: 722,
+		accuracy: 90,
+		basePower: 130,
+		category: "Special",
+		name: "Star Burst",
+		pp: 5,
+		priority: 0,
+		flags: {mirror: 1},
+		onModifyMove(move, pokemon) {
+			if (pokemon.getStat('atk', false, true) > pokemon.getStat('spa', false, true)) move.category = 'Physical';
+		},
+		onModifyType(move, pokemon) {
+			switch (pokemon.baseSpecies.name) {
+			case 'Shyleon':
+				move.type = 'Fairy';
+				break;
+			case 'Shyleon-Terrestrial':
+				move.type = 'Fairy';
+				break;
+			case 'Shyleon-X':
+				move.type = 'Fairy';
+				break;
+			case 'Shyleon-Astro':
+				move.type = 'Fairy';
+				break;
+			case 'Shulong':
+				move.type = 'Dragon';
+				break;
+			case 'Shulong-Terrestrial':
+				move.type = 'Dragon';
+				break;
+			case 'Shulong-X':
+				move.type = 'Dragon';
+				break;
+			case 'Shulong-Astro':
+				move.type = 'Dragon';
+				break;
+			case 'Trishout':
+				move.type = 'Sound';
+				break;
+			case 'Trishout-Terrestrial':
+				move.type = 'Sound';
+				break;
+			case 'Trishout-X':
+				move.type = 'Sound';
+				break;
+			case 'Trishout-Astro':
+				move.type = 'Sound';
+				break;
+			}
+		},
+		ignoreAbility: true,
+		secondary: null,
+		target: "normal",
+		type: "Normal",
+		contestType: "Cool",
+	},
 	tessenjutsu: {
 		num: 612,
 		accuracy: 95,
