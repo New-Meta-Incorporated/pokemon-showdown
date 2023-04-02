@@ -15899,7 +15899,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 44.5,
 		color: "Yellow",
 		tags: ["Mythical"],
-		eggGroups: ["Undiscovered"],
+
 	},
 	meltanunova: {
 		num: 808,
@@ -15914,6 +15914,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 8,
 		color: "Green",
 		eggGroups: ["Undiscovered"],
+		newmeta: "true",
 	},
 	meltan: {
 		num: 808,
@@ -15958,6 +15959,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		weightkg: 500,
 		color: "Brown",
 		eggGroups: ["Undiscovered"],
+		newmeta: "true",
 	},
 	melmetalgmax: {
 		num: 809,
