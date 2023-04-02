@@ -206,7 +206,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			return false;
 		},
 	},
-
+	
 	lovetouch: {
 		name: "Love Touch",
 		noCopy: true, // doesn't get copied by Baton Pass
@@ -246,7 +246,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 				this.add('-end', pokemon, 'Attract', '[silent]');
 			},
 	},
-
+	
 	trapped: {
 		name: 'trapped',
 		noCopy: true,
@@ -632,11 +632,11 @@ export const Conditions: {[k: string]: ConditionData} = {
 				this.debug('Sunny Day fire boost');
 				return this.chainModify(1.5);
 			}
-			if (move.type === 'Water' && attacker.hasAbility('hydrothermal')) {
+			if (move.type === 'Water' && attacker.hasAbility('steampower')) {
 				this.debug('Sunny Day Steam Power water boost');
 				return this.chainModify(1.1);
 			}
-			if (move.type === 'Water' && !attacker.hasAbility('hydrothermal')) {
+			if (move.type === 'Water' && !attacker.hasAbility('steampower')) {
 				this.debug('Sunny Day water suppress');
 				return this.chainModify(0.5);
 			}
@@ -844,7 +844,7 @@ export const Conditions: {[k: string]: ConditionData} = {
 			this.add('-weather', 'none');
 		},
 	},
-
+	
 	neutralweather: {
 		name: 'Neutral Weather',
 		effectType: 'Weather',
