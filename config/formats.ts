@@ -469,7 +469,7 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen8nmclassic',
-		ruleset: ['[Gen 8 NMClassic] NU'],
+		ruleset: ['[Gen 8 NMClassic] MegaZ NU'],
 		banlist: ['NU', 'PUBL'],
 	},
 	{
