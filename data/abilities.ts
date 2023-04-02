@@ -5759,7 +5759,6 @@ foundry: {
 		rating: 4,
 		num: 226,
 	},
-	/*
 	supercell: {
 		onUpdate(pokemon) {
 			if (pokemon.baseSpecies.baseSpecies !== 'Typhlosion' || pokemon.transformed) return;
@@ -5787,7 +5786,7 @@ foundry: {
 		name: "Supercell",
 		rating: 3,
 		num: 295,
-	}, */
+	},
 	syntheticalloy: {
 		onEffectiveness(typeMod, target, type, move) {
 			if (move.type == 'fire') return 0;
