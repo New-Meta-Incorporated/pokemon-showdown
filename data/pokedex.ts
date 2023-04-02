@@ -21793,4 +21793,5 @@ nebuluga: {
 		evoType: "useItem",
 		evoItem: "Ice Stone",
 		eggGroups: ["Field"],
+	},
 };
