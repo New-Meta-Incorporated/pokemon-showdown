@@ -5465,7 +5465,7 @@ foundry: {
 		rating: 3,
 		num: 280,
 	},
-	/*lernean: {
+	lernean: {
 		onResidualOrder: 29,
 		onResidual(pokemon) {
 			if (!pokemon.baseSpecies.id.includes('hydreigonmega') || !pokemon.species.id.includes('hydreigonmega') || !pokemon.hp) {
@@ -5523,7 +5523,7 @@ foundry: {
 		gen: 6,
 		rating: 4,
 		num: 18,
-	},*/
+	},
 	noctem: {
 		onStart(source) {
 			this.field.setWeather('newmoon');
