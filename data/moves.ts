@@ -24175,7 +24175,7 @@ terrorize: {
 		target: "randomNormal",
 		type: "Psychic",
 		contestType: "Cool",
-	},
+	},Z
 	tessenjutsu: {
 		num: 612,
 		accuracy: 95,
