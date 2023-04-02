@@ -30862,8 +30862,7 @@ terrorize: {
 			onModifyCritRatio(critRatio) {
 				if (target.status === 'frz') {
 				 return critRatio + 3;
-				}
-			}
+			},
 		},
 		secondary: {
 			chance: 10,
