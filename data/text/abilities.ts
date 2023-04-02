@@ -13,21 +13,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
 		shortDesc: "This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.",
 	},
-	junglespirit: {
-		name: "Jungle Spirit",
-		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
-		shortDesc: "This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.",
-	},
-	dragonarmor: {
-		name: "Dragon Armor",
-		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
-		shortDesc: "This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.",
-	},
-	voicetuning: {
-		name: "Dragon Armor",
-		desc: "This Pokemon's moves that match one of its types have a same-type attack bonus (STAB) of 2 instead of 1.5.",
-		shortDesc: "This Pokemon's same-type attack bonus (STAB) is 2 instead of 1.5.",
-	},
 	aerilate: {
 		name: "Aerilate",
 		desc: "This Pokemon's Normal-type moves become Flying-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
@@ -390,13 +375,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		block: "#damp",
 	},
-	majesticaura: {
-		name: "Majestic Aura",
-		desc: "While this Pokemon is active, priority moves from opposing Pokemon targeted at allies are prevented from having an effect.",
-		shortDesc: "While this Pokemon is active, allies are protected from opposing priority moves.",
-
-		block: "#damp",
-	},
 	defeatist: {
 		name: "Defeatist",
 		desc: "While this Pokemon has 1/2 or less of its maximum HP, its Attack and Special Attack are halved.",
@@ -477,10 +455,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		damage: "  ([POKEMON] was hurt by its Dry Skin.)",
 	},
-	crystalcase: {
-		name: "Crystal Case",
-		shortDesc: "This Pokemon is immune Water and ecieves 1.5x Damage and gains +2 Sp. Atk from Fire moves.",
-	},
 	finesugar: {
 		name: "Fine Sugar",
 		shortDesc: "This Pokemon is healed 1/4 by Fire, 1/8 by Sun; is hurt 1.25x by Water, 1/8 by Rain.",
@@ -506,14 +480,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	electricsurge: {
 		name: "Electric Surge",
 		shortDesc: "On switch-in, this Pokemon summons Electric Terrain.",
-	},
-	solardiffuse: {
-		name: "Solar Diffuse",
-		shortDesc: "On switch-in, this Pokemon summons Shining Terrain.",
-	},
-	lunardiffuse: {
-		name: "Lunar Diffuse",
-		shortDesc: "On switch-in, this Pokemon summons Midnight Terrain.",
 	},
 	starguardian: {
 		name: "Star Guardian",
@@ -550,6 +516,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	filter: {
 		name: "Filter",
 		shortDesc: "This Pokemon receives 3/4 damage from supereffective attacks.",
+	},
+	overshadow: {
+		name: "Overshadow",
+		shortDesc: "This Pokemon receives 1/2 damage from shorter foe's attacks.",
 	},
 	shieldwall: {
 		name: "Shield Wall",
@@ -604,11 +574,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Fluffy",
 		desc: "This Pokemon receives 1/2 damage from contact moves, but double damage from Fire moves.",
 		shortDesc: "This Pokemon takes 1/2 damage from contact moves, 2x damage from Fire moves.",
-	},
-	barbednest: {
-		name: "Barbed Nest",
-		desc: "This Pokemon receives 1/2 damage from contact moves, but double damage from Fire moves.",
-		shortDesc: "Pokemon making contact with this Pokemon lose 1/8 max HP and this Pokemon takes 1/2 damage.",
 	},
 	paranoid: {
 		name: "Paranoid",
@@ -681,10 +646,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Blood Lust",
 		shortDesc: "This Pokemon recovers 1/6 of damage dealt when using a contact move.",
 	},
-	bloodthirst: {
-		name: "Bloodthirst",
-		shortDesc: "This Pokemon recovers 1/8 of its health when using a biting move.",
-	},
 	galvanize: {
 		name: "Galvanize",
 		desc: "This Pokemon's Normal-type moves become Electric-type moves and have their power multiplied by 1.2. This effect comes after other effects that change a move's type, but before Ion Deluge and Electrify's effects.",
@@ -716,14 +677,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	gooey: {
 		name: "Gooey",
-		shortDesc: "Pokemon making contact with this Pokemon have their Speed lowered by 1 stage.",
-	},
-	empathy: {
-		name: "Empathy",
-		shortDesc: "Pokemon making contact with this Pokemon have their Attack and Sp. Atk lowered by 1 stage.",
-	},
-	fairydust: {
-		name: "Fairy Dust",
 		shortDesc: "Pokemon making contact with this Pokemon have their Speed lowered by 1 stage.",
 	},
 	gorillatactics: {
@@ -920,11 +873,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	psychout: {
 		name: "Psych Out",
-		desc: "On switch-in, this Pokemon lowers the Sp. Atk of adjacent opposing Pokemon by 1 stage. Pokemon behind a substitute are immune.",
-		shortDesc: "On switch-in, this Pokemon lowers the Sp. Atk of adjacent opponents by 1 stage.",
-	},
-	grimtears: {
-		name: "Grim Tears",
 		desc: "On switch-in, this Pokemon lowers the Sp. Atk of adjacent opposing Pokemon by 1 stage. Pokemon behind a substitute are immune.",
 		shortDesc: "On switch-in, this Pokemon lowers the Sp. Atk of adjacent opponents by 1 stage.",
 	},
@@ -1125,11 +1073,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Prevents adjacent opposing Steel-type Pokemon from choosing to switch out unless they are immune to trapping.",
 		shortDesc: "Prevents adjacent Steel-type foes from choosing to switch.",
 	},
-	baitedline: {
-		name: "Baited Line",
-		desc: "Prevents adjacent opposing Water-type Pokemon from choosing to switch out unless they are immune to trapping.",
-		shortDesc: "Prevents adjacent Water-type foes from choosing to switch.",
-	},
 	magicpull: {
 		name: "Magic Pull",
 		desc: "Prevents adjacent opposing Fairy-type Pokemon from choosing to switch out unless they are immune to trapping.",
@@ -1253,10 +1196,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	neuroforce: {
 		name: "Neuroforce",
 		shortDesc: "This Pokemon's attacks that are super effective against the target do 1.25x damage.",
-	},
-	microstrike: {
-		name: "Micro Strike",
-		shortDesc: "This Pokemon's attacks against heavier foes do 1.2x damage.",
 	},
 	neutralizinggas: {
 		name: "Neutralizing Gas",
@@ -1490,12 +1429,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		start: "  [POKEMON] is exerting its pressure!",
 	},
-	dreadspace: {
-		name: "Dread Space",
-		shortDesc: "If this Pokemon is the target of a foe's move, that move loses 3 additional PP.",
-
-		start: "  [POKEMON] is exerting its dread!",
-	},
 	primordialsea: {
 		name: "Primordial Sea",
 		desc: "On switch-in, the weather becomes heavy rain that prevents damaging Fire-type moves from executing, in addition to all the effects of Rain Dance. This weather remains in effect until this Ability is no longer active for any Pokemon, or the weather is changed by Delta Stream or Desolate Land.",
@@ -1567,10 +1500,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			shortDesc: "This Pokemon's Speed is raised 1 stage if hit by a Bug-, Dark-, or Ghost-type attack.",
 		},
 	},
-	fervor: {
-		name: "Fervor",
-		shortDesc: "This Pokemon's Speed icreases by 2 after using a contact move. Once per switch-in.",
-	},
 	receiver: {
 		name: "Receiver",
 		desc: "This Pokemon copies the Ability of an ally that faints. Abilities that cannot be copied are \"No Ability\", As One, Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Gulp Missile, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, Wonder Guard, and Zen Mode.",
@@ -1578,12 +1507,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		gen7: {
 			desc: "This Pokemon copies the Ability of an ally that faints. Abilities that cannot be copied are \"No Ability\", Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Illusion, Imposter, Multitype, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, Wonder Guard, and Zen Mode.",
 		},
-
-		changeAbility: "  [SOURCE]'s [ABILITY] was taken over!",
-	},
-	seance: {
-		name: "Seance",
-		shortDesc: "This Pokemon copies the Ability of a Pokemon that faints.",
 
 		changeAbility: "  [SOURCE]'s [ABILITY] was taken over!",
 	},
@@ -1679,18 +1602,10 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "If Sandstorm is active, this Pokemon's Speed is doubled. This Pokemon takes no damage from Sandstorm.",
 		shortDesc: "If Sandstorm is active, this Pokemon's Speed is doubled; immunity to Sandstorm.",
 	},
-	ambush: {
-		name: "Ambush",
-		shortDesc: "During Darkness, this Pokemon' has 1.5x Accuacy.",
-	},
 	sandspit: {
 		name: "Sand Spit",
 		desc: "When this Pokemon is hit by an attack, Sandstorm begins. This effect happens after the effects of Max and G-Max Moves.",
 		shortDesc: "When this Pokemon is hit, Sandstorm begins.",
-	},
-	fruitrition: {
-		name: "Fruitrition",
-		shortDesc: "Self recovery moves heal an extra 25%.",
 	},
 	frostscatter: {
 		name: "Frost Scatter",
@@ -1724,10 +1639,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "If Sandstorm is active, this Pokemon's evasiveness is multiplied by 1.25. This Pokemon takes no damage from Sandstorm.",
 		shortDesc: "If Sandstorm is active, this Pokemon's evasiveness is 1.25x; immunity to Sandstorm.",
 	},
-	foulshroud: {
-		name: "Foul Shroud",
-		shortDesc: "During Darkness, this Pokemon's evasiveness is 1.25x.",
-	},
 	sandsniper: {
 		name: "Sand Sniper",
 		shortDesc: "If Sandstorm is active, this Pokemon's attacks never miss.",
@@ -1739,11 +1650,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	disenchant: {
 		name: "Disenchant",
-		shortDesc: "This Pokemon is immune to Fairy-type attacks.",
-	},
-	scarecrow: {
-		name: "Scarecrow",
-		shortDesc: "This Pokemon is immune to Flying-type attacks.",
+		shortDesc: "This Pokemon is immune to Fairy attacks.",
 	},
 	dragonslayer: {
 		name: "Dragon Slayer",
@@ -1760,13 +1667,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 
 		transform: "[POKEMON] formed a school!",
 		transformEnd: "[POKEMON] stopped schooling!",
-	},
-	dirtypool: {
-		name: "Dirty Pool",
-		shortDesc: "If user is Chimaooze, changes to Pooled Form if it has > 1/4 max HP, else Solo Form.",
-
-		transform: "[POKEMON] formed a pool!",
-		transformEnd: "[POKEMON] stopped pooling!",
 	},
 	scrappy: {
 		name: "Scrappy",
@@ -1894,7 +1794,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	trickster: {
 		name: "Trickster",
-		shortDesc: "When used, Room effects last 2 more turns.",
+		shortDesc: "On switch-in, this Pokemon summons Trickroom.",
 	},
 	puzzlingaura: {
 		name: "Puzzling Aura",
@@ -1948,10 +1848,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Big Throns",
 		desc: "If Grassy Terrain is active, this Pokemon's Attack is 1.3x.",
 		shortDesc: "If Grassy Terrain is active, this Pokemon's Attack is 1.3x.",
-	},
-	junglefury: {
-		name: "Jungle Fury",
-		shortDesc: "If Grassy Terrain is active, this Pokemon's critical hit ratio is raised by 1 stage.",
 	},
 	territorial: {
 		name: "Territorial",
@@ -2063,10 +1959,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Deep Freeze",
 		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be frozen.",
 	},
-	sandman: {
-		name: "Sandman",
-		shortDesc: "30% chance a Pokemon making contact with this Pokemon will be put to sleep.",
-	},
 	steadfast: {
 		name: "Steadfast",
 		shortDesc: "If this Pokemon flinches, its Speed is raised by 1 stage.",
@@ -2147,10 +2039,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Spectral Jaws causes all biting moves used by the Pokémon to be reclassified as Special moves and receive a 30% boost.		",
 		shortDesc: "All biting moves are Special and have a 1.3x Boost",
 	},
-	crystaljaw: {
-		name: "Crystal Jaw",
-		shortDesc: "All biting moves are Special.",
-	},
 	mysticfist: {
 		name: "Mystic Fist",
 		desc: "All punching moves used by the Pokémon to be reclassified as Special moves and receive a 30% boost.		",
@@ -2158,13 +2046,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	prismguard: {
 		name: "Prism Guard",
-		desc: "Pokemon not making contact with this Pokemon lose 1/8 of their maximum HP, rounded down.",
-		shortDesc: "Pokemon not making contact with this Pokemon lose 1/8 of their max HP.",
-
-		damage: "  [POKEMON] was hurt!",
-	},
-	refractive: {
-		name: "Refractive",
 		desc: "Pokemon not making contact with this Pokemon lose 1/8 of their maximum HP, rounded down.",
 		shortDesc: "Pokemon not making contact with this Pokemon lose 1/8 of their max HP.",
 
@@ -2203,7 +2084,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	blazeboost: {
 		name: "Blaze Boost",
 		desc: "Immediately before the user uses a Fire-type attack its Attack, Special Attack, and Speed are increased by 1 stage. When Blaze Boost is activated by Delta Emolga, its form changes. When in this form, there is a 10% chance that Pokémon using a contact move against Delta Emolga will become burned.",
-		shortDesc: "Increases Atk, SpA and Spe before using Fire moves. May burn on contact.",
+		shortDesc: "Fire moves up its stats. May burn on contact.",
 	},
 	chlorofury: {
 		name: "Chlorofury",
@@ -2232,10 +2113,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Artillery",
 		desc: "This Pokemon's ballistic attacks have their power multiplied by 1.2.",
 		shortDesc: "This Pokemon's ballistic attacks have 1.2x power.",
-	},
-	siegedrive: {
-		name: "Siege Drive",
-		shortDesc: "This Pokemon's ballistic attacks have 1.5x power.",
 	},
 	solidfooting: {
 		name: "Solid Footing",
@@ -2299,11 +2176,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "Boosts the power of moves used repeatedly. Each time a move is used consecutively, its power is boosted by 20% up to a maximum increase of 100%. Switching or using another move returns the move's power to normal. Multi-strike moves are counted by the number of turns on which they are used, not the number of hits made. It also stacks with Metronome, which offers an identical power boost for every consecutive usage.",
 		shortDesc: "Consecutively using the same move increases its damage.",
 	},
-	momentum: {
-		name: "Momentum",
-		desc: "Boosts the power of moves used repeatedly. Each time a move is used consecutively, its power is boosted by 20% up to a maximum increase of 100%. Switching or using another move returns the move's power to normal. Multi-strike moves are counted by the number of turns on which they are used, not the number of hits made. It also stacks with Metronome, which offers an identical power boost for every consecutive usage.",
-		shortDesc: "Consecutively using the same move increases its damage.",
-	},
 	conditioning: {
 		name: "Conditioning",
 		shortDesc: "Consecutively using the same move against this Pokemon decreases its damage.",
@@ -2330,7 +2202,7 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	phototroph: {
 		name: "Phototroph",
 		desc: "Pokémon with Phototroph restore 1/16 of their total HP at the end of each turn. The effects of Phototroph are doubled during harsh sunlight and are completely negated when the sky is dark or heavy rain is in effect.",
-		shortDesc: "Restores 1/16 of total HP at the end of each turn, 1/8 in Sun and has no effect in other weather.",
+		shortDesc: "The Pokémon gradually regains HP in sunny weather.",
 	},
 	stench: {
 		name: "Stench",
@@ -2375,13 +2247,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 			desc: "OHKO moves fail when used against this Pokemon.",
 			shortDesc: "OHKO moves fail when used against this Pokemon.",
 		},
-
-		activate: "  [POKEMON] endured the hit!",
-	},
-	resolute: {
-		name: "Resolute",
-		desc: "If this Pokemon is at full HP, it survives one hit with at least 1 HP. OHKO moves fail when used against this Pokemon.",
-		shortDesc: "If this Pokemon is at full HP, it survives one hit with at least 1 HP. Immune to OHKO.",
 
 		activate: "  [POKEMON] endured the hit!",
 	},
@@ -2490,10 +2355,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	tintedlens: {
 		name: "Tinted Lens",
-		shortDesc: "This Pokemon's attacks that are not very effective on a target deal double damage.",
-	},
-	tactician: {
-		name: "Tactician",
 		shortDesc: "This Pokemon's attacks that are not very effective on a target deal double damage.",
 	},
 	torrent: {
@@ -2638,10 +2499,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		desc: "This Pokemon is immune to Poison-type moves and restores 1/4 of its maximum HP, rounded down, when hit by an Poison-type move.",
 		shortDesc: "This Pokemon heals 1/4 of its max HP when hit by Poison moves; Poison immunity.",
 	},
-	levinskin: {
-		name: "Levin Skin",
-		shortDesc: "This Pokemon sharply raises its Attack when hit by Electric moves.",
-	},
 	wanderingspirit: {
 		name: "Wandering Spirit",
 		desc: "Pokemon making contact with this Pokemon have their Ability swapped with this one. Does not affect a Pokemon which has the Ability As One, Battle Bond, Comatose, Disguise, Gulp Missile, Hunger Switch, Ice Face, Illusion, Multitype, Neutralizing Gas, Power Construct, RKS System, Schooling, Shields Down, Stance Change, or Zen Mode.",
@@ -2653,11 +2510,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 		name: "Water Absorb",
 		desc: "This Pokemon is immune to Water-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Water-type move.",
 		shortDesc: "This Pokemon heals 1/4 of its max HP when hit by Water moves; Water immunity.",
-	},
-	flameeater: {
-		name: "Flame Eater",
-		desc: "This Pokemon is immune to Fire-type moves and restores 1/4 of its maximum HP, rounded down, when hit by a Fire-type move.",
-		shortDesc: "This Pokemon heals 1/4 of its max HP when hit by Fire moves; Fire immunity.",
 	},
 	heartless: {
 		name: "Heartless",
@@ -2715,11 +2567,6 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	wonderskin: {
 		name: "Wonder Skin",
-		desc: "All non-damaging moves that check accuracy have their accuracy changed to 50% when used on this Pokemon. This change is done before any other accuracy modifying effects.",
-		shortDesc: "Status moves with accuracy checks are 50% accurate when used on this Pokemon.",
-	},
-	elusive: {
-		name: "Elusive",
 		desc: "All non-damaging moves that check accuracy have their accuracy changed to 50% when used on this Pokemon. This change is done before any other accuracy modifying effects.",
 		shortDesc: "Status moves with accuracy checks are 50% accurate when used on this Pokemon.",
 	},
@@ -2944,21 +2791,16 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	overshadow: {
 		name: "Overshadow",
-		shortDesc: "The Atk and Sp. Atk stat of all other shorter foes is reduced by 50%.",
+		shortDesc: "The Def and Sp. Def stat of all other shorter foes is reduced by 50%.",
 
-		start: "  [POKEMON]'s Overshadow weakened the Foes offenses!",
+		start: "  [POKEMON]'s Overshadow weakened the Defenses of shorter foes!",
 	},
-	// Insurgence
-	// Uranium
-	// Sage
-	// Xenoverse
-	waterstream: {
-		name: "Water Stream",
-		shortDesc: "This Pokemon receives 1/2 damage from attacks when moving before the foe.",
+	daunt: {
+		name: "Daunt",
+		desc: "On switch-in, this Pokemon lowers the Special Attack of adjacent opposing Pokemon by 1 stage. Inner Focus, Oblivious, Own Tempo, Scrappy, and Pokemon behind a substitute are immune.",
+		shortDesc: "On switch-in, this Pokemon lowers the Special Attack of adjacent opponents by 1 stage.",
+		newmeta: "true",
 	},
-	// Chromatic
-	// Radical Red
-	// Tectonic
 	conflagrant: {
 		name: "Conflagrant",
 		shortDesc: "This Pokemon's contact moves have a 30% chance of burning.",
@@ -3056,6 +2898,12 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	// 	shortDesc: "This Pokemon's tail-based attacks have 1.3x power.",
 	// 	newmeta: "true",
 	// },
+	petrify: {
+		name: "Petrify",
+		desc: "On switch-in, this Pokemon lowers the Speed of adjacent opposing Pokemon by 1 stage. Inner Focus, Oblivious, Own Tempo, Scrappy, and Pokemon behind a substitute are immune.",
+		shortDesc: "On switch-in, this Pokemon lowers the Speed of adjacent opponents by 1 stage.",
+		newmeta: "true",
+	},
 	toxicwasteland: {
 		name: "Toxic Wasteland",
 		shortDesc: "On switch-in, this Pokemon summons Toxic Cloud.",
