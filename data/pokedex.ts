@@ -21818,6 +21818,8 @@ nebuluga: {
 		weightkg: 67,
 		color: "White",
 		prevo: "Gulava",
+		evoType: "useItem",
+		evoItem: "Fire Stone",
 		eggGroups: ["Flying"],
 	},
 };
