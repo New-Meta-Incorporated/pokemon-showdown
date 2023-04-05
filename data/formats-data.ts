@@ -7220,4 +7220,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	doodbird: {
 		tier: "ZU",
 	},
+	alpython: {
+		tier: "UU",
+	},
 };
