@@ -7223,4 +7223,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	alpython: {
 		tier: "UU",
 	},
+	komonger: {
+		tier: "NU",
+	},
+	baobital: {
+		tier: "ZU",
+	},
 };
