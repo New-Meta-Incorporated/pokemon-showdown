@@ -7229,4 +7229,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	baobital: {
 		tier: "ZU",
 	},
+	pintherata: {
+		tier: "OU",
+	},
+	cladite: {
+		tier: "UU",
+	},
 };
