@@ -105733,7 +105733,6 @@ tazelle: {
       rockslide: ["8M", "7M"],
       rocktomb: ["8M", "7M"],
       rototiller: ["8M", "7M"],
-      shellsmash: ["8M", "7M"],
       skullbash: ["8M", "7M"],
       slackoff: ["8M", "7M"],
       slam: ["8M", "7M"],
