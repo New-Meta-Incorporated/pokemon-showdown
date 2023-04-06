@@ -7247,9 +7247,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	gorvipera: {
 		tier: "UU",
 	},
-	licoroller: {
-		tier: "PU",
-	},
 	falcaero: {
 		tier: "UU",
 	},
