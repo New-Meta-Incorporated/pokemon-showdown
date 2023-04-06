@@ -7178,6 +7178,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	neglecrow: {
 		tier: "ZU",
 	},
+	licoroller: {
+		tier: "PU"
+	},
 	pyroterois: {
 		tier: "PU",
 	},
@@ -7220,6 +7223,9 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	doodbird: {
 		tier: "ZU",
 	},
+	chilladder: {
+		tier: "LC UU"
+	},
 	alpython: {
 		tier: "UU",
 	},
@@ -7252,5 +7258,17 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	sussew: {
 		tier: "NU",
+	},
+	gulava: {
+		tier: "LC UU",
+	},
+	pelikiln: {
+		tier: "RU",
+	},
+	tombsbone: {
+		tier: "LC OU",
+	},
+	headsbone: {
+		tier: "UU"
 	},
 };
