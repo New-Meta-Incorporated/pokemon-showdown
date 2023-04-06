@@ -7247,4 +7247,10 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	falcaero: {
 		tier: "UU",
 	},
+	osteolortal: {
+		tier: "OU",
+	},
+	sussew: {
+		tier: "NU",
+	},
 };
