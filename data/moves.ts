@@ -21711,7 +21711,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Star Pierce",
 		pp: 15,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, bypasssub: 1},
 		secondary: null,
 		target: "normal",
 		type: "Cosmic",
@@ -23574,7 +23574,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		name: "Play Rough",
 		pp: 10,
 		priority: 0,
-		flags: {contact: 1, protect: 1, mirror: 1, Dance: 1, Contact: 1},
+		flags: {contact: 1, protect: 1, mirror: 1, dance: 1, Contact: 1},
 		secondary: {
 			onHit(target, source) {
 				target.addVolatile('torment', source);
