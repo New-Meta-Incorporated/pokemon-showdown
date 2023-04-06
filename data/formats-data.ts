@@ -7232,7 +7232,19 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	pintherata: {
 		tier: "OU",
 	},
+	roselisk: {
+		tier: "UU",
+	},
 	cladite: {
+		tier: "UU",
+	},
+	gorvipera: {
+		tier: "UU",
+	},
+	licoroller: {
+		tier: "PU",
+	},
+	falcaero: {
 		tier: "UU",
 	},
 };

@@ -23481,7 +23481,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		priority: 0,
 		flags: {contact: 1, protect: 1, mirror: 1},
 		onPrepareHit(target, source, move) {
-			if (target.status =='frz') //instead of mod crit ratio, sets crit to true 
+			if (target.status =='frz') //instead of mod crit ratio, sets crit to true
 			move.willCrit = true;
 		},
 		// condition: { //untested, but previous code couldn't pass startup
@@ -23603,5 +23603,19 @@ export const Moves: {[moveid: string]: MoveData} = {
 		target: "any",
 		type: "Fire",
 		contestType: "Cool",
+	},
+	falconpunch: {
+		num: 100001,
+		accuracy: 100,
+		basePower: 70,
+		category: "Physical",
+		name: "Falcon Punch",
+		pp: 10,
+		priority: 0,
+		flags: {contact: 1, protect: 1, punch: 1, mirror: 1},
+		willCrit: true,
+		secondary: null,
+		target: "normal",
+		type: "Flying",
 	},
 };
