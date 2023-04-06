@@ -21846,4 +21846,17 @@ nebuluga: {
 		eggGroups: ["Grass"],
 		newmeta: "true",
 	},
+	gorvipera: {
+		num: 10202,
+		name: "Gorvipera",
+		types: ["Poison", "Fairy"],
+		gender: "F",
+		baseStats: {hp: 85, atk: 60, def: 80, spa: 110, spd: 115, spe: 85},
+		abilities: {0: "Shed Skin", 1: "Marvel Scale", H: "Cute Charm"},
+		heightm: 1.6,
+		weightkg: 65,
+		color: "Purple",
+		eggGroups: ["Human-Like","Monster"],
+		newmeta: "true",
+		},
 };
