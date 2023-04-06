@@ -7850,4 +7850,29 @@ export const Items: {[itemid: string]: ItemData} = {
 		num: 761,
 		gen: 8,
 	},
+	mirrorherb: {
+	name: "Mirror Herb",
+	fling: {
+		basePower: 10,
+	},
+	spritenum: 0, // TODO
+	onFoeAfterBoost(boost, target, source, effect) {
+		if (effect?.name === 'Opportunist' || effect?.name === 'Mirror Herb') return;
+		const boostPlus: SparseBoostsTable = {};
+		let statsRaised = false;
+		let i: BoostID;
+		for (i in boost) {
+			if (boost[i]! > 0) {
+				boostPlus[i] = boost[i];
+				statsRaised = true;
+			}
+		}
+		if (!statsRaised) return;
+		const pokemon: Pokemon = this.effectState.target;
+		pokemon.useItem();
+		this.boost(boostPlus, pokemon);
+	},
+	num: 1883,
+	gen: 8,
+},
 };
