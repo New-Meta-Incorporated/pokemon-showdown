@@ -111,7 +111,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 		damageTaken: {
 			par: 3,
 			Bug: 0,
-			Cosmic: 1,
+			Cosmic: 0,
 			Dark: 0,
 			Dragon: 0,
 			Electric: 2,
@@ -468,7 +468,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 		damageTaken: {
 			sandstorm: 3,
 			Bug: 0,
-			Cosmic: 2,
+			Cosmic: 0,
 			Dark: 0,
 			Dragon: 0,
 			Electric: 0,
@@ -553,7 +553,7 @@ export const TypeChart: {[k: string]: TypeData} = {
 	neutral: {
 		damageTaken: {
 			Bug: 0,
-			Cosmic: 3,
+			Cosmic: 0,
 			Dark: 0,
 			Dragon: 0,
 			Electric: 0,
