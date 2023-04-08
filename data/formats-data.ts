@@ -671,7 +671,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "LC OU",
 	},
 	magneton: {
-		tier: "PU",
+		tier: "UU",
 		doublesTier: "NFE",
 	},
 	magnezone: {
@@ -679,7 +679,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["bodypress", "electroweb", "flashcannon", "protect", "thunderbolt", "voltswitch"],
 		randomDoubleBattleLevel: 88,
-		tier: "RU",
+		tier: "OU",
 		doublesTier: "(DUU)",
 	},
 	farfetchd: {
@@ -2259,7 +2259,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["energyball", "leafstorm", "protect", "sleeppowder", "sludgebomb"],
 		randomDoubleBattleLevel: 86,
-		tier: "NUBL",
+		tier: "UU",
 		doublesTier: "(DUU)",
 	},
 	gulpin: {
@@ -4343,7 +4343,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		randomBattleLevel: 84,
 		randomDoubleBattleMoves: ["bulletpunch", "closecombat", "drainpunch", "gunkshot", "icepunch", "knockoff", "protect"],
 		randomDoubleBattleLevel: 88,
-		tier: "NUBL",
+		tier: "UU",
 		doublesTier: "(DUU)",
 	},
 	furfrou: {
@@ -7268,4 +7268,22 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	headsbone: {
 		tier: "UU"
 	},
+	commocto: {
+	tier: "RU",
+},
+immarsh: {
+	tier: "PU",
+},
+jacrackle: {
+	tier: "PU",
+},
+Catterbox : {
+	tier: "LC OU",
+},
+gouzigami: {
+	tier: "NFE",
+},
+orizuian: {
+	tier: "UU",
+},
 };
