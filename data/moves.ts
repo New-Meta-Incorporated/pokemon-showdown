@@ -23623,7 +23623,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		accuracy: 100,
 		basePower: 65,
 		category: "Physical",
-		name: "Malcious Maw",
+		name: "Malicious Maw",
 		pp: 10,
 		priority: 0,
 		flags: {contact: 1, bite: 1, protect: 1, mirror: 1},
