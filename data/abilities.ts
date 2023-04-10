@@ -6627,7 +6627,7 @@ seedsower: {
 sharpness: {
 	onBasePowerPriority: 19,
 	onBasePower(basePower, attacker, defender, move) {
-		if (move.flags['slicing']) {
+		if (move.flags['blade']) {
 			this.debug('Shapness boost');
 			return this.chainModify(1.5);
 		}
