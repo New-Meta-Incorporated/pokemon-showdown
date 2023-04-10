@@ -7749,7 +7749,7 @@ export const MovesText: {[k: string]: MoveText} = {
 starpierce: {
 	name: "Star Pierce",
 	desc: "Bypasses Substitute",
-	shortDesc: "Bypasses Sub",
+	shortDesc: "Bypasses Substitute",
 },
 	falconpunch: {
 	name: "Falcon Punch",
