@@ -19950,8 +19950,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Delpni",
 		types: ["Water"],
 		baseStats: {hp: 45, atk: 66, def: 39, spa: 66, spd: 39, spe: 67},
-		abilities: {0: "Torrent", 1: "Infiltrator", H: "Reckless"},
-		heightm: 0.9,
+		abilities: {0: "Torrent", 1: "Infiltrator", H: "Reckless"},Ryh
 		weightkg: 10,
 		color: "Blue",
 		evos: ["Botterfin"],
@@ -20119,7 +20118,6 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		prevo: "Beeow",
 		newmeta: "true",
 	},
-	/* DELETED
 	rampharos:{
 		num: 10068,
 		name: "Rampharos",
@@ -20131,7 +20129,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		color: "Gray",
 		eggGroups: ["Field"],
 		newmeta: "true",
-	},*/
+	},
 	doubragon:{
 		num: 10069,
 		name: "Doubragon",
@@ -22013,4 +22011,29 @@ headsbone: {
 		evoLevel: 49,
 		eggGroups: ["Fairy", "Field"],
 	},
+	rhytjum: {
+		num:10213,
+		name: "Rhytjum",
+		types: ["Normal", "Fairy"],
+		baseStats: {hp: 50, atk: 73, def: 55, spa: 73, spd: 55, spe: 64},
+		abilities: {0: "Dancer", 1: "Own Tempo", H: "Quick Feet"},
+		heightm: 0.5,
+		weightkg: 5.9,
+		color: "Red",
+		evos: ["Dafdaencer"],
+		eggGroups: ["Water 1", "Field"]
+	},
+	dafdaencer: {
+		num: 10213,
+		types: ["Normal", "Fairy"],
+		baseStats: {hp: 70, atk: 103, def: 60, spa: 103, spd: 60, spe: 94},
+		abilities: {0: "Dancer", 1: "Own Tempo", H: "Quick Feet"},
+		heightm: 1.2,
+		weightkg: 60,
+		color: "Red",
+		prevo: "Rhytjum",
+		evoLevel: 32,
+		eggGroups: ["Water 1", "Field"]
+	},
+
 };

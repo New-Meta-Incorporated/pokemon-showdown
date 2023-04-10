@@ -7286,4 +7286,10 @@ gouzigami: {
 orizuian: {
 	tier: "UU",
 },
+rhytjum: {
+	tier: "LC UU",
+},
+dafdaencer: {
+	tier: "PU",
+},
 };
