@@ -109698,8 +109698,7 @@ rhytjum: {
 			danceoff: ["8M", "7M"],
 			pirouette: ["8M", "7M"],
    },
-
-},
+	},
 samurotthisui: {
 	learnset: {
 		aerialace: ["9M", "9L29"],
