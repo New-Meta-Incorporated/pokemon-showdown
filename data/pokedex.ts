@@ -19950,7 +19950,7 @@ export const Pokedex: {[speciesid: string]: SpeciesData} = {
 		name: "Delpni",
 		types: ["Water"],
 		baseStats: {hp: 45, atk: 66, def: 39, spa: 66, spd: 39, spe: 67},
-		abilities: {0: "Torrent", 1: "Infiltrator", H: "Reckless"},Ryh
+		abilities: {0: "Torrent", 1: "Infiltrator", H: "Reckless"},
 		weightkg: 10,
 		color: "Blue",
 		evos: ["Botterfin"],
@@ -22035,5 +22035,4 @@ headsbone: {
 		evoLevel: 32,
 		eggGroups: ["Water 1", "Field"]
 	},
-
 };
