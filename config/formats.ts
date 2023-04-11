@@ -107,13 +107,6 @@ export const Formats: FormatList = [
 		ruleset: ['[Gen 8] OU', 'Blitz'],
 	},
 	{
-		name: "[Gen 8] CU",
-
-		mod: 'gen8',
-		ruleset: ['[Gen 8] OU'],
-		banlist: ['OU', 'CUBL'],
-	},
-	{
 		name: "[Gen 8] UU",
 		threads: [
 			`&bullet; <a href="https://www.smogon.com/forums/threads/3681331/">UU Metagame Discussion</a>`,
@@ -122,8 +115,8 @@ export const Formats: FormatList = [
 		],
 
 		mod: 'gen8',
-		ruleset: ['[Gen 8] CU'],
-		banlist: ['CU', 'UUBL'],
+		ruleset: ['[Gen 8] OU'],
+		banlist: ['UU', 'UUBL'],
 	},
 	{
 		name: "[Gen 8] RU",
