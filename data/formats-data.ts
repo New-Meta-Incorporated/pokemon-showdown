@@ -6804,7 +6804,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		tier: "RU",
 	},
 	optikwill:{
-		tier: "UU",
+		tier: "CU",
 	},
 	larvivid: {
 		tier: "LC UU",
