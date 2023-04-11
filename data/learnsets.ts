@@ -109698,7 +109698,6 @@ rhytjum: {
 			danceoff: ["8M", "7M"],
 			pirouette: ["8M", "7M"],
    },
-
 },
 samurotthisui: {
 	learnset: {
@@ -109761,4 +109760,5 @@ samurotthisui: {
 		waterpulse: ["9M", "9L25"],
 		xscissor: ["9M"],
 	},
+},
 };
