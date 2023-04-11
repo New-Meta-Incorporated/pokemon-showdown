@@ -109759,5 +109759,6 @@ samurotthisui: {
 		waterpledge: ["9M"],
 		waterpulse: ["9M", "9L25"],
 		xscissor: ["9M"],
+		},
 	},
 };
