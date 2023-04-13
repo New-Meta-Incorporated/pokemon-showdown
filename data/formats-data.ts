@@ -3263,8 +3263,6 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 	},
 	samurott: {
 		tier: "PU",
-		isNonstandard: "Future",
-		tier: "Illegal",
 	},
 	patrat: {
 		tier: "LC UU",
