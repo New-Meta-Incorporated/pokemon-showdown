@@ -6172,4 +6172,22 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		rating: 4,
 		num: 206,
 	},
+	ravenous: {
+      onModifyMove(move) {
+        if (target.hp * 2 <= target.maxhp) {
+            move.flags['heal'] = 1;
+		  }
+        if (move.drain) {
+            const dividend = move.drain[0] * 4 + move.drain[3];
+            const divisor = move.drain[3] * 4;
+            move.drain = [dividend,divisor];
+            }
+            else {
+                move.drain = [3,4];
+           		 }
+            },
+				name: "Ravenous",
+				rating: 3,
+				num: 207,
+			},
 };
