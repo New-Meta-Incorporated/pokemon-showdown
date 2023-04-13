@@ -23637,48 +23637,4 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Dark",
 		contestType: "Tough",
 	},
-	triplearrows: {
-	num: 100003,
-	accuracy: 100,
-	basePower: 90,
-	category: "Physical",
-	name: "Triple Arrows",
-	pp: 10,
-	priority: 0,
-	flags: {protect: 1, mirror: 1},
-	critRatio: 2,
-	secondaries: [
-		{
-			chance: 50,
-			boosts: {
-				def: -1,
-			},
-		}, {
-			chance: 30,
-			volatileStatus: 'flinch',
-		},
-	],
-	target: "normal",
-	type: "Fighting",
-},
-ceaselessedge: {
-	num: 100004,
-	accuracy: 90,
-	basePower: 65,
-	category: "Physical",
-	name: "Ceaseless Edge",
-	pp: 15,
-	priority: 0,
-	flags: {contact: 1, protect: 1, mirror: 1, slicing: 1},
-	self: {
-		onHit(source) {
-			for (const side of source.side.foeSidesWithConditions()) {
-				side.addSideCondition('spikes');
-			}
-		},
-	},
-	secondary: {}, // allows sheer force to trigger
-	target: "normal",
-	type: "Dark",
-},
 };
