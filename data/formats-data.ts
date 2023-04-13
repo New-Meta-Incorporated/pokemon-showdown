@@ -4703,8 +4703,7 @@ export const FormatsData: {[k: string]: SpeciesFormatsData} = {
 		doublesTier: "(DUU)",
 	},
 	decidueyehisui: {
-		isNonstandard: "Future",
-		tier: "Illegal",
+		tier: "UU",
 	},
 	litten: {
 		tier: "LC UU",
