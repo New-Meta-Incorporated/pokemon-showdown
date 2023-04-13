@@ -23619,7 +23619,7 @@ export const Moves: {[moveid: string]: MoveData} = {
 		type: "Flying",
 	},
 	maliciousmaw: {
-		num: 100002,
+		num: 100004,
 		accuracy: 100,
 		basePower: 65,
 		category: "Physical",
