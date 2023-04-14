@@ -6179,7 +6179,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		  }
         if (move.drain) {
             const dividend = move.drain[0] * 4 + move.drain[3];
-            const divisor = move.drain[3] * 4;
+            const divisor = move.drain[1] * 4;
             move.drain = [dividend,divisor];
             }
             else {
@@ -6187,7 +6187,7 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
            		 }
             },
 				name: "Ravenous",
-				rating: 3,
+				rating: 1,
 				num: 207,
 			},
 };
