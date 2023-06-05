@@ -22012,7 +22012,7 @@ headsbone: {
 		eggGroups: ["Fairy", "Field"],
 	},
 	rhytjum: {
-		num:10213,
+		num: 10213,
 		name: "Rhytjum",
 		types: ["Normal", "Fairy"],
 		baseStats: {hp: 50, atk: 73, def: 55, spa: 73, spd: 55, spe: 64},
