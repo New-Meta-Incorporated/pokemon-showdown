@@ -1669,6 +1669,28 @@ export class Pokemon {
 		return false;
 	}
 
+	pickpocketItem(source?: Pokemon, target?: Pokemon){
+		// if (!this.isActive) {console.log(!this.isActive); return false;}
+		// if (!this.item) {console.log(!this.item); return false;}
+		if (!source) source = this;
+		if(!target) target = source.adjacentFoes()[0];
+		console.log("source = " + source.name) //attacker
+		console.log("target = " + target.name) //defender
+		if (this.battle.gen === 4) {
+			if (toID(this.ability) === 'multitype') return false;
+			if (source && toID(source.ability) === 'multitype') return false;
+		}
+		const item = source.item;
+		console.log("item = " + item);
+			//added by binachier
+			target.item = item
+			source.lastItem = item;
+			source.item = '';
+			source.itemState = {id: '', target: this};
+			target.pendingStaleness = undefined;
+			return item
+	}
+
 	setItem(item: string | Item, source?: Pokemon, effect?: Effect) {
 		if (!this.hp || !this.isActive) return false;
 		if (typeof item === 'string') item = this.battle.dex.items.get(item);

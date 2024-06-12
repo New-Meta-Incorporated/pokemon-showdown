@@ -964,8 +964,8 @@ export const AbilitiesText: {[k: string]: AbilityText} = {
 	},
 	pickpocket: {
 		name: "Pickpocket",
-		desc: "If this Pokemon has no item and is hit by a contact move, it steals the attacker's item. This effect applies after all hits from a multi-hit move; Sheer Force prevents it from activating if the move has a secondary effect.",
-		shortDesc: "If this Pokemon has no item and is hit by a contact move, it steals the attacker's item.",
+		desc: "If this Pokemon has no item and is hit by or attacks with a contact move, it steals the opponent's item. This effect applies before when attacking, and after all hits from a multi-hit move;",
+		shortDesc: "If this Pokemon has no item and is hit by or attacks with by a contact move, it steals the opponent's item.",
 	},
 	pickup: {
 		name: "Pickup",

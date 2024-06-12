@@ -2734,21 +2734,34 @@ export const Abilities: {[abilityid: string]: AbilityData} = {
 		num: 253,
 	},
 	pickpocket: {
-		onAfterMoveSecondary(target, source, move) {
+		onAfterMoveSecondary(target, source, move) {//source is attacking the pickpocket pokemon
 			if (source && source !== target && move?.flags['contact']) {
 				if (target.item || target.switchFlag || target.forceSwitchFlag || source.switchFlag === true) {
 					return;
 				}
-				const yourItem = source.takeItem(target);
+				const yourItem = source.pickpocketItem(source,target); //target steals item from Source
 				if (!yourItem) {
-					return;
-				}
-				if (!target.setItem(yourItem)) {
-					source.item = yourItem.id;
 					return;
 				}
 				this.add('-enditem', source, yourItem, '[silent]', '[from] ability: Pickpocket', '[of] ' + source);
 				this.add('-item', target, yourItem, '[from] ability: Pickpocket', '[of] ' + source);
+			}
+		},
+		onModifyMove(this, move, source, target) {
+			console.log("damaging hit by: " + source.name)
+			if(!target) return
+			console.log("target exists");
+			if (source && source !== target && move?.flags['contact'] && source.hasAbility("pickpocket")) { 
+				console.log(source + " has the ability pickpocket")
+				if (!target.item || target.switchFlag || target.forceSwitchFlag || source.switchFlag === true) {
+					return;
+				}
+				const yourItem = target.pickpocketItem(target,source); //source steals item from Target
+				if (!yourItem) {
+					return;
+				}
+				this.add('-enditem', target, yourItem, '[silent]', '[from] ability: Pickpocket', '[of] ' + target);
+				this.add('-item', source, yourItem, '[from] ability: Pickpocket', '[of] ' + target);
 			}
 		},
 		name: "Pickpocket",
